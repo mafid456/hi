@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone Repo') {
+            steps {
+                git 'https://github.com/mafid456/hi.git'
+            }
+        }
+
+        stage('Deploy Tooplate Site') {
+            steps {
+                
+               
+            }
+        }
+    }
+}
+

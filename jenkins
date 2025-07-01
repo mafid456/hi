@@ -10,7 +10,10 @@ pipeline {
 
         stage('Deploy Tooplate Site') {
             steps {
-                
+                sh '''
+                    rm -rf /var/www/html/tooplate_site/*
+                    cp -r * /var/www/html/tooplate_site/
+                '''
                
             }
         }

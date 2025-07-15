@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Start') {
+            steps {
+                echo 'Starting the Jenkins job...'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Running build step...'
+                sh 'echo Hello from Build Stage'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                sh 'echo Tests completed'
+            }
+        }
+
+        stage('End') {
+            steps {
+                echo 'Job finished!'
+            }
+        }
+    }
+}
